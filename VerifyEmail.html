@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>请验证您的账户</title>
     <style>
+      body{
+        box-sizing: border-box;
+      }
+
       .overlay{
         position: fixed;
         width: 100%;
@@ -14,50 +18,82 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1;
         left: 0;
         top: 0;
       }
 
       .card{
-        width: 400px;
+        width: 700px;
         background-color: white;
         border-radius: 8px;
-        z-index: 2;
-        padding: 60px 70px;
+        z-index: 1;
+        position: relative;
       }
 
-      h1{
-        margin: 0 0 40px;
+      .header{
+        height: 75px;
+        border-bottom: 1px solid #E0E0E0;
+      }
+
+      .headerText{
         font-family: 'ZCOOL KuaiLe';
+        color: #C97A40;
+        padding: 26px 40px;
+      }
+
+      .icon{
+        position: absolute;
+        top:11px;
+        left: 286px;
+      }
+
+      .content{
+        margin: 120px 0 8px 250px;
+        font-family: 'Microsoft YaHei';
+        color: #4f4f4f;
+      }
+
+      .content h1{
         letter-spacing: 2px;
+        font-size: 24px;
       }
 
       button{
-        font-family: 'ZCOOL KuaiLe';
+        font-family: 'ZCOOL Kuaile';
         outline: none;
         border: none;
         cursor: pointer;
         word-break: keep-all;
-        height: 36px;
-        padding: 2px 8px;
-        font-size: 18px;
-        letter-spacing: 2px;
+        height: 52px;
+        width: 150px;
+        font-size: 20px;
         background: #EB9050;
         color: #ffffff;
         text-align: center;
-        letter-spacing: 2px;
         border-radius: 8px;
-        margin-top: 20px;
+        margin: 64px 275px 72px;
+      }
+
+      .footer{
+        color: #828282;
+        margin: 0 243px 32px;
+        font-family: 'Microsoft YaHei';
       }
     </style>
 </head>
 <body>
   <div class="overlay">
     <div class="card">
-      <h1>祝贺您注册一团袋鼠。</h1>
-      <div>请点击下面的按钮以验证您的账户。</div>
+      <div class="header">
+        <div class="headerText">一团袋鼠</div>
+        <img class="icon" src="images/logo.svg" alt="Logo">
+      </div>
+        <div class="content">
+          <h1>欢迎注册</h1>
+          <div>请点击按钮按钮完成账户激活</div>
+        </div>
       <button>激活账户</button>
+      <div class="footer">如非本人操作，请...</div>
     </div>
   </div>
 </body>
